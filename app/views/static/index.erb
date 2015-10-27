@@ -17,20 +17,48 @@
 
 				<form class="form-inline" action="/urls" method="post">
 					<input id="form-bootstrap-overrides" class="form-control input-lg" type="text" placeholder="Enter your URL here" name="long_url">
-					<button class="btn btn-default btn-lg" type="submit" value="Submit">Submit</button>
+					<button class="btn btn-default btn-lg sharp" type="submit" value="Submit">SUBMIT</button>
 				</form>
 				<p id="error"><%= @error %></p>
 			</div>
 
-			<div>
+			<div class="row row-centered">
+			  <div class="col-md-4">
+			  	<span class="glyphicon glyphicon-duplicate iconformat"></span>
+			  	<p2>Copy and paste your link</p2>
+			  </div>
+			  <div class="col-md-4">
+			    <span class="glyphicon glyphicon-hand-up iconformat"></span>
+			  	<p2>Click submit</p2>
+			  </div>
+			  <div class="col-md-4">
+			 		<span class="glyphicon glyphicon-sunglasses iconformat"></span>
+			  	<p2>Share shor.ty link with friends!</p2>
+			  </div>
+			</div>
+
+			<div class="recent_list">
 
 				<p>Here are your recently shortened URLs!</p>
-					<% @urls.each do |url|%>
-					<ul id="history">
-						<a href="http://localhost:9393/<%= url.short_url%>">http://shor.ty/<%= url.short_url%></a>
-						<p id="count">Visited <%= url.click_count%> time(s)!</p>
-					</ul>
-				<% end%>
+
+					<table class="table table-hover">
+					  <thead>
+					    <tr>
+					      <th>Shor.ty</th>
+					      <th>Site</th>
+					      <th>Visit count</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <% @urls.each do |url|%>
+						    <tr>
+						      <td><a href="http://localhost:9393/<%= url.short_url%>">http://shor.ty/<%= url.short_url%></a></td>
+						      <td><%= url.long_url%></td>
+						      <td><%= url.click_count%></td>
+						    </tr>
+					   <%end%>
+					  </tbody>
+					</table>
 			</div>
 		</container>
 	</body>
