@@ -1,2 +1,19 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1>Welcome to shor.ty</h1>
+<p>Short link generator!</p>
+
+<form action="/urls" method="post">
+	Enter URL:
+	<input type="text" name="long_url">
+	<input type="submit" value="Submit">
+</form>
+
+<div>
+<p>Here are your recently shortened URLs!</p>
+
+<% @urls.each do |url|%>
+<ul>
+<a href="http://localhost:9393/<%= url.short_url%>">http://localhost:9393/<%= url.short_url%></a>
+</ul>
+<% end%>
+
+</div>
