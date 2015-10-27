@@ -5,13 +5,23 @@ get '/' do
 end
 
 post '/urls' do
-	Url.create(long_url: params[:long_url])
-	redirect to '/'
+	@url = Url.new(long_url: params[:long_url])
+
+	if @url.save
+		redirect to '/'
+
+	else
+		@error = "That URL is invalid."
+		@urls = Url.all
+		erb :"static/index"
+	end
 end
 
 
 get '/:short_url' do
 	@url = Url.find_by(short_url: params[:short_url])
+	@url.click_count += 1
+	@url.save
 	
-	redirect "http://#{@url.long_url}"
+	redirect "#{@url.long_url}"
 end

@@ -8,11 +8,16 @@
 </form>
 
 <div>
+<p>
+<%= @error %>
+
+</p>
 <p>Here are your recently shortened URLs!</p>
 
 <% @urls.each do |url|%>
 <ul>
 <a href="http://localhost:9393/<%= url.short_url%>">http://localhost:9393/<%= url.short_url%></a>
+<%= url.click_count%>
 </ul>
 <% end%>
 
