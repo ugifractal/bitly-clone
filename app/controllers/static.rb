@@ -1,6 +1,7 @@
 require 'byebug'
 get '/' do
-	@urls = Url.all
+	@urls = Url.last(5)
+	@urls.reverse!
   erb :"static/index"
 end
 

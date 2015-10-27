@@ -1,24 +1,37 @@
-<h1>Welcome to shor.ty</h1>
-<p>Short link generator!</p>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-<form action="/urls" method="post">
-	Enter URL:
-	<input type="text" name="long_url">
-	<input type="submit" value="Submit">
-</form>
+		<link rel="stylesheet" type="text/css" href="/css/application.css">
+	</head>
 
-<div>
-<p>
-<%= @error %>
+	<body>
+		<container>
+			<div id="intro">
+				<h1>Welcome to shor.ty</h1>
+				<p>Short link generator!</p>
+			</div>
 
-</p>
-<p>Here are your recently shortened URLs!</p>
+			<div id="bar">
 
-<% @urls.each do |url|%>
-<ul>
-<a href="http://localhost:9393/<%= url.short_url%>">http://localhost:9393/<%= url.short_url%></a>
-<%= url.click_count%>
-</ul>
-<% end%>
+				<form class="form-inline" action="/urls" method="post">
+					<input id="form-bootstrap-overrides" class="form-control input-lg" type="text" placeholder="Enter your URL here" name="long_url">
+					<button class="btn btn-default btn-lg" type="submit" value="Submit">Submit</button>
+				</form>
+				<p id="error"><%= @error %></p>
+			</div>
 
-</div>
+			<div>
+
+				<p>Here are your recently shortened URLs!</p>
+					<% @urls.each do |url|%>
+					<ul id="history">
+						<a href="http://localhost:9393/<%= url.short_url%>">http://shor.ty/<%= url.short_url%></a>
+						<p id="count">Visited <%= url.click_count%> time(s)!</p>
+					</ul>
+				<% end%>
+			</div>
+		</container>
+	</body>
+</html>

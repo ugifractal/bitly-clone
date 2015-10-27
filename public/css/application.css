@@ -1,0 +1,94 @@
+body {
+	background-image: url('/img/bg.jpg');
+}
+div {
+	padding-top: 100px;
+ 	width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 72px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 300;
+	line-height: 26px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+form {
+  width: 800px;
+  text-align: center;
+}
+
+input {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+#form-bootstrap-overrides {
+	width: 600px;
+}
+
+p {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+	text-align: center;
+}
+
+a {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+	text-align: center;
+}
+
+#intro p {
+	padding-top: 50px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+	text-align: center;
+}
+
+#count {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+	display: inline;
+}
+
+#error {
+	color: red;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+}
+
+#history {
+	padding-top: 20px;
+}
