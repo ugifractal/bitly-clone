@@ -9,7 +9,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'pathname'
 
 	# database
-require 'pg'
+require 'mysql'
 require 'active_record'
 require 'logger'
 
