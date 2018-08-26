@@ -1,6 +1,6 @@
 # Specify gemfile Location and general variables
-ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
-
+#ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+ENV['BUNDLE_GEMFILE'] ||= './Gemfile'
 # Perform requiring gem that we need
 ######################################################################
 	# basic
